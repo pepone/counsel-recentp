@@ -7,7 +7,7 @@ Install the `counsel-recentp` package from MELPA
 ```
 (use-package counsel-recentp
   :ensure t
-  :binding
+  :bind
   (("C-c R" . counsel-recentp)))
 ```
 

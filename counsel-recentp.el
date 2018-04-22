@@ -3,13 +3,13 @@
 ;; Copyright (C) 2018 José Gutiérrez de la Concha
 
 ;; Author: José Gutiérrez de la Concha <jose@zeroc.com>
-;; Maintainer: José Gutiérrez de la Concha <jose@zeroc.com>
-;; Created: 21 Apr 2018
-;; Modified: 21 Apr 2018
-;; Version: 0.1
-;; Package-Requires: ((emacs "24.3") (counsel "0.9") (magit "2.12.1"))
-;; Keywords: magit counsel projects
 ;; URL: https://github.com/pepone/counsel-recentp
+;; Version: 0.1
+;; Package-Version: 0.1
+;; Package-Requires: ((emacs "24.3") (counsel "0.9.0") (magit "2.12.1"))
+;; Keywords: matching
+
+;; This file is not part of GNU Emacs.
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -22,9 +22,7 @@
 ;; General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to the
-;; Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-;; Boston, MA 02111-1307, USA.
+;; along with this package.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 

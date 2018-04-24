@@ -1,13 +1,14 @@
-;; counsel-recentp --- An counsel helper to list you recently used git repositories
+;;; counsel-recentp.el --- List recently used git repositories with counsel -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018 José Gutiérrez de la Concha
 
 ;; Author: José Gutiérrez de la Concha <jose@zeroc.com>
-;; URL: https://github.com/pepone/counsel-recentp
+
 ;; Version: 0.1
 ;; Package-Version: 0.1
 ;; Package-Requires: ((emacs "24.3") (counsel "0.9.0") (magit "2.12.1"))
 ;; Keywords: matching
+;; Homepage: https://github.com/pepone/counsel-recentp
 
 ;; This file is not part of GNU Emacs.
 

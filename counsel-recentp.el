@@ -34,22 +34,14 @@
 ;; Please see README.md from the same repository for documentation.
 
 ;;; Code:
-(defun counsel-recentp-git-repository-p (d)
-  "True if D contain a .git repository."
-  (file-exists-p (concat d "/.git/config")))
 
-(defun counsel-recentp-find-git-repository (d)
-  "Find out if D belongs to a git repository."
-  (if (equal (file-name-directory (directory-file-name d)) d)
-      nil
-    (if (counsel-recentp-git-repository-p d)
-        d
-      (counsel-recentp-find-git-repository (file-name-directory (directory-file-name d))))))
 (require 'recentf)
 (require 'ivy)
 (require 'magit)
 
-(defvar recentf-list)
+(defun counsel-recentp-find-git-repository (directory)
+  "Return the git repository containing DIRECTORY, nil if none."
+  (locate-dominating-file directory #'magit-git-repo-p))
 
 ;;;###autoload
 (defun counsel-recentp ()

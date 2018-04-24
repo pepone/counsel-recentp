@@ -45,6 +45,9 @@
     (if (counsel-recentp-git-repository-p d)
         d
       (counsel-recentp-find-git-repository (file-name-directory (directory-file-name d))))))
+(require 'recentf)
+(require 'ivy)
+(require 'magit)
 
 (defvar recentf-list)
 
@@ -52,9 +55,6 @@
 (defun counsel-recentp ()
   "Find git repositories on `recentf-list'."
   (interactive)
-  (require 'recentf)
-  (require 'ivy)
-  (require 'magit)
   (recentf-mode)
   (ivy-read "Recentp: " (delq nil (delete-dups (mapcar #'counsel-recentp-find-git-repository recentf-list)))
             :action (lambda (f)

@@ -41,7 +41,8 @@
 
 (defun counsel-recentp-find-git-repository (directory)
   "Return the git repository containing DIRECTORY, nil if none."
-  (locate-dominating-file directory #'magit-git-repo-p))
+  (ignore-errors
+      (locate-dominating-file directory #'magit-git-repo-p)))
 
 ;;;###autoload
 (defun counsel-recentp ()
